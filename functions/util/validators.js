@@ -30,6 +30,8 @@ exports.validateSignupData = data => {
 };
 
 exports.validateLoginData = data => {
+  console.log("validateLoginData data = " + data);
+  console.log("validateLoginData data.email = " + data.email);
   let errors = {};
 
   if (isEmpty(data.email)) errors.email = "Must not be empty";
@@ -39,4 +41,20 @@ exports.validateLoginData = data => {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false
   };
+};
+
+exports.reduceUserDetails = data => {
+  console.log("data reduceuserdetails" + data);
+  console.log("data.bio =" + data.bio);
+  let userDetails = {};
+
+  if (!isEmpty(data.bio.trim())) userDetails.bio = data.bio;
+  if (!isEmpty(data.website.trim())) {
+    if (data.website.trim().substring(0, 4) !== "http") {
+      userDetails.website = `http://${data.website.trim()}`;
+    } else userDetails.website = data.website;
+  }
+  if (!isEmpty(data.location.trim())) userDetails.location = data.location;
+
+  return userDetails;
 };

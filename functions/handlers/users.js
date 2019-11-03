@@ -4,7 +4,11 @@ const config = require("../util/config");
 const firebase = require("firebase");
 firebase.initializeApp(config);
 
-const { validateSignupData, validateLoginData } = require("../util/validators");
+const {
+  validateSignupData,
+  validateLoginData,
+  reduceUserDetails
+} = require("../util/validators");
 
 exports.signup = (req, res) => {
   const newUser = {
@@ -91,6 +95,28 @@ exports.login = (req, res) => {
     });
 };
 
+exports.addUserDetails = (req, res) => {
+  console.log("reqbody.bio = " + req.body.bio);
+  console.log("reqbody = " + req.body);
+  const user = JSON.parse(req.body);
+  // const user = {
+  //   bio: req.body.bio,
+  //   website: req.body.website,
+  //   location: req.body.location
+  // };
+  let userDetails = reduceUserDetails(user);
+
+  db.doc(`/users/${req.user.handle}`)
+    .update(userDetails)
+    .then(() => {
+      return res.json({ message: "Details added successfully" });
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({ error: err.code });
+    });
+};
+
 exports.uploadImage = (req, res) => {
   const BusBoy = require("busboy");
   const path = require("path");
@@ -103,18 +129,20 @@ exports.uploadImage = (req, res) => {
   let imageToBeUploaded = {};
 
   busboy.on("file", (fieldname, file, filename, encoding, mimetype) => {
-    console.log(fieldname);
-    console.log(filedname);
-    console.log(mimetype);
+    console.log(fieldname, file, filename, encoding, mimetype);
+    if (mimetype != "image/jpeg" && mimetype !== "image/png") {
+      return res.status(400).json({ error: "Wrong file type submitted" });
+    }
+
     //my.image.png
     const imageExtension = filename.split(".")[filename.split(".").length - 1];
 
-    imageFilename = `${Math.round(
+    imageFileName = `${Math.round(
       Math.random() * 10000000000000
-    )}.${imageExtension}`;
+    ).toString()}.${imageExtension}`;
     const filepath = path.join(os.tmpdir(), imageFileName);
     imageToBeUploaded = { filepath, mimetype };
-    file.pipe(fs.createWriteStream(filePath));
+    file.pipe(fs.createWriteStream(filepath));
   });
   busboy.on("finish", () => {
     admin
