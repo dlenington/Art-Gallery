@@ -41,3 +41,32 @@ exports.postOnePainting = (req, res) => {
       console.error(err);
     });
 };
+
+exports.getPainting = (req, res) => {
+  let paintingData = {};
+  db.doc(`/Paintings/${req.params.paintingId}`)
+    .get()
+    .then(doc => {
+      if (!doc.exists) {
+        return res.status(404).json({ error: "Painting not found" });
+      }
+      paintingData = doc.data();
+      paintingData.paintingId = doc.id;
+      return db
+        .collection("Comments")
+        .orderBy("createdAt", "desc")
+        .where("paintingId", "==", req.params.paintingId)
+        .get();
+    })
+    .then(data => {
+      paintingData.comments = [];
+      data.forEach(doc => {
+        paintingData.comments.push(doc.data());
+      });
+      return res.json(paintingData);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: err.code });
+    });
+};

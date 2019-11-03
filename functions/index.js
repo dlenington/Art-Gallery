@@ -3,24 +3,28 @@ const app = require("express")();
 const { db } = require("./util/admin");
 const FBAuth = require("./util/fbAuth");
 
-const cors = require("cors");
-app.use(cors());
-
-const { getAllPaintings, postOnePainting } = require("./handlers/paintings");
+const {
+  getAllPaintings,
+  postOnePainting,
+  getPainting
+} = require("./handlers/paintings");
 const {
   signup,
   login,
   uploadImage,
-  addUserDetails
+  addUserDetails,
+  getAuthenticatedUser
 } = require("./handlers/users");
 
 app.get("/paintings", getAllPaintings);
 app.post("/paintings", FBAuth, postOnePainting);
-app.post("/user", FBAuth, addUserDetails);
+app.get("/paintings/:paintingId", getPainting);
 
 app.post("/signup", signup);
 app.post("/login", login);
 app.post("/user/image", FBAuth, uploadImage);
+app.post("/user", FBAuth, addUserDetails);
+app.get("/user", FBAuth, getAuthenticatedUser);
 
 //Post a painting
 
