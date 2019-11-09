@@ -1,0 +1,1283 @@
+[debug] [2019-11-07T16:03:27.108Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T16:03:27.112Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-11-07T16:03:27.112Z] CLI Version:   7.6.1
+[debug] [2019-11-07T16:03:27.113Z] Platform:      darwin
+[debug] [2019-11-07T16:03:27.113Z] Node Version:  v10.16.0
+[debug] [2019-11-07T16:03:27.117Z] Time:          Thu Nov 07 2019 10:03:27 GMT-0600 (Central Standard Time)
+[debug] [2019-11-07T16:03:27.117Z] ----------------------------------------------------------------------
+[debug] [2019-11-07T16:03:27.117Z] 
+[debug] [2019-11-07T16:03:27.146Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-07T16:03:27.147Z] > authorizing via signed-in user
+[debug] [2019-11-07T16:03:27.147Z] [iam] checking project art-app-32060 for permissions ["firebase.projects.get"]
+[debug] [2019-11-07T16:03:27.148Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-07T16:03:27.148Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-07T16:03:27.340Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-07T16:03:27.359Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/art-app-32060:testIamPermissions  
+
+[debug] [2019-11-07T16:03:27.549Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-07T16:03:27.550Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/art-app-32060  
+ 
+[debug] [2019-11-07T16:03:27.851Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/macbook/art-app'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/macbook/art-app/functions" for Cloud Functions...
+[debug] [2019-11-07T16:03:28.390Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-07T16:03:28.391Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:03:28.404Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:03:28.408Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:03:28.409Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/art-app-32060/us-central1/api).
+[debug] [2019-11-07T16:03:35.682Z] Accepted request POST /art-app-32060/us-central1/api/login --> api
+[debug] [2019-11-07T16:03:36.026Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:03:36.027Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:03:36.030Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:03:36.031Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:03:36.032Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:03:36.985Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:03:36.985Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:03:36.985Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:03:36.993Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4349.sock"}
+[debug] [2019-11-07T16:03:36.995Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4349.sock"}
+[debug] [2019-11-07T16:03:37.026Z] [runtime-status] Ephemeral server used! {}
+[info] >  validateLoginData data = [object Object]
+[info] >  validateLoginData data.email = user@gmail.com
+[debug] [2019-11-07T16:03:37.062Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:05:02.581Z] Accepted request POST /art-app-32060/us-central1/api/Paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:05:02.863Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:05:02.865Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:05:02.868Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:05:02.871Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:05:02.871Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:05:03.249Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:05:03.249Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:05:03.249Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:05:03.256Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4355.sock"}
+[debug] [2019-11-07T16:05:03.257Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4355.sock"}
+[debug] [2019-11-07T16:05:03.282Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:05:03.288Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:05:12.241Z] Accepted request POST /art-app-32060/us-central1/api/Paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:05:12.716Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:05:12.718Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:05:12.725Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:05:12.727Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:05:12.729Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:05:13.675Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:05:13.675Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:05:13.675Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:05:13.683Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4356.sock"}
+[debug] [2019-11-07T16:05:13.684Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4356.sock"}
+[debug] [2019-11-07T16:05:13.696Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:05:13.704Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:06:20.545Z] Accepted request POST /art-app-32060/us-central1/api/paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:06:21.142Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:06:21.144Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:06:21.150Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:06:21.153Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:06:21.155Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:06:22.347Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:06:22.347Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:06:22.347Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:06:22.356Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4357.sock"}
+[debug] [2019-11-07T16:06:22.356Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4357.sock"}
+[debug] [2019-11-07T16:06:22.368Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:06:22.375Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:07:44.426Z] Accepted request POST /art-app-32060/us-central1/api/paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:07:44.948Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:07:44.950Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:07:44.962Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:07:44.964Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:07:44.965Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:07:46.127Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:07:46.127Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:07:46.128Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:07:46.137Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4365.sock"}
+[debug] [2019-11-07T16:07:46.138Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4365.sock"}
+[debug] [2019-11-07T16:07:46.151Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:07:46.160Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:08:07.321Z] Accepted request GET /art-app-32060/us-central1/api/paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:08:07.628Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:08:07.629Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:08:07.632Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:08:07.634Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:08:07.637Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:08:08.594Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:08:08.594Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:08:08.595Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:08:08.603Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4366.sock"}
+[debug] [2019-11-07T16:08:08.603Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4366.sock"}
+[debug] [2019-11-07T16:08:08.614Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:08:08.747Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.data (/Users/macbook/art-app/functions/handlers/paintings.js:150:32)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:4366) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.catch.err (/Users/macbook/art-app/functions/handlers/paintings.js:155:23)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:4366) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:4366) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:10:53.474Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-07T16:10:55.163Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-07T16:10:55.165Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:10:55.168Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:10:55.170Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:10:55.171Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:10:56.027Z] Accepted request GET /art-app-32060/us-central1/api/paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:10:56.346Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:10:56.347Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:10:56.352Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:10:56.353Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:10:56.355Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:10:56.752Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:10:56.753Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:10:56.753Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:10:56.759Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4372.sock"}
+[debug] [2019-11-07T16:10:56.760Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4372.sock"}
+[debug] [2019-11-07T16:10:56.772Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:10:56.857Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.data (/Users/macbook/art-app/functions/handlers/paintings.js:150:32)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:4372) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.catch.err (/Users/macbook/art-app/functions/handlers/paintings.js:155:23)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:4372) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:4372) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:11:02.643Z] Accepted request GET /art-app-32060/us-central1/api/Paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:11:02.948Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:11:02.949Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:11:02.952Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:11:02.953Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:11:02.954Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:11:03.350Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:11:03.351Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:11:03.351Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:11:03.366Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4373.sock"}
+[debug] [2019-11-07T16:11:03.367Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4373.sock"}
+[debug] [2019-11-07T16:11:03.380Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:11:03.421Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.data (/Users/macbook/art-app/functions/handlers/paintings.js:150:32)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:4373) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.catch.err (/Users/macbook/art-app/functions/handlers/paintings.js:155:23)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:4373) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:4373) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:11:34.548Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-07T16:11:35.833Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-07T16:11:35.834Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:11:35.839Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:11:35.839Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:11:35.840Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:11:48.549Z] Accepted request GET /art-app-32060/us-central1/api/paintings/7Ey8c1aTMtgBFHpSu1Ef/like --> api
+[debug] [2019-11-07T16:11:48.871Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:11:48.872Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:11:48.874Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:11:48.875Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:11:48.876Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:11:49.547Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:11:49.547Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:11:49.547Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:11:49.555Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4376.sock"}
+[debug] [2019-11-07T16:11:49.556Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4376.sock"}
+[debug] [2019-11-07T16:11:49.565Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:11:49.634Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:13:30.293Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-07T16:13:31.891Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-07T16:13:31.892Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:13:31.901Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:13:31.903Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:13:31.904Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:14:21.251Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-07T16:14:22.786Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-07T16:14:22.787Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:14:22.793Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:14:22.796Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:14:22.798Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:16:58.670Z] Accepted request GET /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-07T16:16:59.255Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:16:59.256Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:16:59.261Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:16:59.263Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:16:59.264Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:17:00.263Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:17:00.265Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:17:00.265Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:17:00.271Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4403.sock"}
+[debug] [2019-11-07T16:17:00.272Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4403.sock"}
+[debug] [2019-11-07T16:17:00.301Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:17:00.745Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:17:51.757Z] Accepted request GET /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-07T16:17:52.251Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:17:52.252Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:17:52.256Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:17:52.258Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:17:52.259Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:17:53.209Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:17:53.209Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:17:53.209Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:17:53.217Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4407.sock"}
+[debug] [2019-11-07T16:17:53.218Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4407.sock"}
+[debug] [2019-11-07T16:17:53.249Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:17:53.632Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:17:59.792Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-07T16:18:00.094Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:18:00.095Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:18:00.098Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:18:00.099Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:18:00.100Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:18:00.503Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:18:00.503Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:18:00.503Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:18:00.511Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4408.sock"}
+[debug] [2019-11-07T16:18:00.512Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4408.sock"}
+[debug] [2019-11-07T16:18:00.531Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:18:00.603Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:18:45.043Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-07T16:18:45.562Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:18:45.563Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:18:45.569Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:18:45.571Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:18:45.572Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:18:46.599Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:18:46.600Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:18:46.600Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:18:46.608Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4411.sock"}
+[debug] [2019-11-07T16:18:46.608Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4411.sock"}
+[debug] [2019-11-07T16:18:46.639Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:18:46.715Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:19:56.862Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-07T16:19:57.382Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:19:57.383Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:19:57.394Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:19:57.397Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:19:57.398Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:19:58.377Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:19:58.377Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:19:58.377Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:19:58.385Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4427.sock"}
+[debug] [2019-11-07T16:19:58.388Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4427.sock"}
+[debug] [2019-11-07T16:19:58.420Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:19:58.507Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-07T16:21:27.538Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-07T16:21:27.858Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-07T16:21:27.860Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-07T16:21:27.864Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-07T16:21:27.865Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:21:27.866Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-07T16:21:28.274Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-07T16:21:28.274Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-07T16:21:28.274Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-07T16:21:28.280Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4428.sock"}
+[debug] [2019-11-07T16:21:28.281Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_4428.sock"}
+[debug] [2019-11-07T16:21:28.298Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-07T16:21:28.339Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573142618,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573142618,
+[info] >    exp: 1573146218,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:09:59.798Z] ----------------------------------------------------------------------
+[debug] [2019-11-08T22:09:59.801Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-11-08T22:09:59.801Z] CLI Version:   7.6.1
+[debug] [2019-11-08T22:09:59.801Z] Platform:      darwin
+[debug] [2019-11-08T22:09:59.801Z] Node Version:  v10.16.0
+[debug] [2019-11-08T22:09:59.807Z] Time:          Fri Nov 08 2019 16:09:59 GMT-0600 (Central Standard Time)
+[debug] [2019-11-08T22:09:59.807Z] ----------------------------------------------------------------------
+[debug] [2019-11-08T22:09:59.807Z] 
+[debug] [2019-11-08T22:09:59.822Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-08T22:09:59.823Z] > authorizing via signed-in user
+[debug] [2019-11-08T22:09:59.823Z] [iam] checking project art-app-32060 for permissions ["firebase.projects.get"]
+[debug] [2019-11-08T22:09:59.824Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-08T22:09:59.824Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-08T22:10:00.021Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-08T22:10:00.045Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/art-app-32060:testIamPermissions  
+
+[debug] [2019-11-08T22:10:00.260Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-08T22:10:00.260Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/art-app-32060  
+ 
+[debug] [2019-11-08T22:10:00.462Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/macbook/art-app'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/macbook/art-app/functions" for Cloud Functions...
+[debug] [2019-11-08T22:10:01.135Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T22:10:01.135Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:10:01.141Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:10:01.143Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:10:01.144Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/art-app-32060/us-central1/api).
+[debug] [2019-11-08T22:10:13.747Z] Accepted request POST /art-app-32060/us-central1/api/login --> api
+[debug] [2019-11-08T22:10:14.357Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:10:14.358Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:10:14.362Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:10:14.364Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:10:14.366Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:10:15.307Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:10:15.308Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:10:15.308Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:10:15.318Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8228.sock"}
+[debug] [2019-11-08T22:10:15.320Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8228.sock"}
+[debug] [2019-11-08T22:10:15.344Z] [runtime-status] Ephemeral server used! {}
+[info] >  validateLoginData data = [object Object]
+[info] >  validateLoginData data.email = user@gmail.com
+[debug] [2019-11-08T22:10:15.375Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:12:43.604Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-08T22:12:44.140Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:12:44.142Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:12:44.150Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:12:44.151Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:12:44.152Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:12:45.085Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:12:45.085Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:12:45.086Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:12:45.093Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8239.sock"}
+[debug] [2019-11-08T22:12:45.094Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8239.sock"}
+[debug] [2019-11-08T22:12:45.127Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:12:45.225Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573251016,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573251016,
+[info] >    exp: 1573254616,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:17:20.718Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-08T22:17:21.263Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:17:21.264Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:17:21.269Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:17:21.271Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:17:21.272Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:17:22.214Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:17:22.214Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:17:22.215Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:17:22.223Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8245.sock"}
+[debug] [2019-11-08T22:17:22.224Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8245.sock"}
+[debug] [2019-11-08T22:17:22.256Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:17:22.336Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573251016,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573251016,
+[info] >    exp: 1573254616,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:27:11.924Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-08T22:27:12.496Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:27:12.497Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:27:12.504Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:27:12.506Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:27:12.506Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:27:13.622Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:27:13.622Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:27:13.622Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:27:13.629Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8262.sock"}
+[debug] [2019-11-08T22:27:13.631Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8262.sock"}
+[debug] [2019-11-08T22:27:13.674Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:27:13.763Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573251016,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573251016,
+[info] >    exp: 1573254616,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:31:33.017Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-08T22:31:33.538Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:31:33.539Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:31:33.546Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:31:33.548Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:31:33.549Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:31:34.448Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:31:34.448Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:31:34.448Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:31:34.455Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8268.sock"}
+[debug] [2019-11-08T22:31:34.456Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8268.sock"}
+[debug] [2019-11-08T22:31:34.484Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:31:34.548Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573251016,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573251016,
+[info] >    exp: 1573254616,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error: Value for argument "data" is not a valid Firestore document. Cannot use "undefined" as a Firestore value (found in field body).
+[info] >      at Object.validateUserInput (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:273:15)
+[info] >      at Object.validateDocumentData (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/write-batch.js:611:22)
+[info] >      at CollectionReference.add (/Users/macbook/art-app/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1765:23)
+[info] >      at exports.postOnePainting (/Users/macbook/art-app/functions/handlers/paintings.js:38:6)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:31:55.226Z] Accepted request POST /art-app-32060/us-central1/api/paintings --> api
+[debug] [2019-11-08T22:31:55.559Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:31:55.560Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:31:55.564Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:31:55.565Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:31:55.566Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:31:56.165Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:31:56.165Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:31:56.166Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:31:56.173Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8269.sock"}
+[debug] [2019-11-08T22:31:56.173Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8269.sock"}
+[debug] [2019-11-08T22:31:56.207Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:31:56.287Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573251016,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573251016,
+[info] >    exp: 1573254616,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:46:10.269Z] Accepted request POST /art-app-32060/us-central1/api/login --> api
+[debug] [2019-11-08T22:46:10.899Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:46:10.900Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:46:10.916Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:46:10.917Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:46:10.918Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:46:12.072Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:46:12.073Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:46:12.073Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:46:12.082Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8388.sock"}
+[debug] [2019-11-08T22:46:12.085Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8388.sock"}
+[debug] [2019-11-08T22:46:12.116Z] [runtime-status] Ephemeral server used! {}
+[info] >  validateLoginData data = [object Object]
+[info] >  validateLoginData data.email = user@gmail.com
+[debug] [2019-11-08T22:46:12.140Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:51:22.016Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/like --> api
+[debug] [2019-11-08T22:51:22.588Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:51:22.591Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:51:22.596Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:51:22.599Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:51:22.600Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:51:23.541Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:51:23.541Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:51:23.541Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:51:23.548Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8400.sock"}
+[debug] [2019-11-08T22:51:23.549Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8400.sock"}
+[debug] [2019-11-08T22:51:23.578Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:51:23.585Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:51:28.279Z] Accepted request POST /art-app-32060/us-central1/api/login --> api
+[debug] [2019-11-08T22:51:28.627Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:51:28.628Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:51:28.631Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:51:28.632Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:51:28.633Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:51:29.049Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:51:29.050Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:51:29.050Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:51:29.058Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8401.sock"}
+[debug] [2019-11-08T22:51:29.059Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8401.sock"}
+[debug] [2019-11-08T22:51:29.077Z] [runtime-status] Ephemeral server used! {}
+[info] >  validateLoginData data = [object Object]
+[info] >  validateLoginData data.email = user@gmail.com
+[debug] [2019-11-08T22:51:29.100Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:52:08.238Z] Accepted request GET /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/like --> api
+[debug] [2019-11-08T22:52:08.547Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:52:08.548Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:52:08.551Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:52:08.552Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:52:08.555Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:52:08.973Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:52:08.973Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:52:08.973Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:52:08.982Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8402.sock"}
+[debug] [2019-11-08T22:52:08.982Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8402.sock"}
+[debug] [2019-11-08T22:52:08.996Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:52:09.080Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.data (/Users/macbook/art-app/functions/handlers/paintings.js:150:32)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:8402) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at paintingDocument.get.then.then.catch.err (/Users/macbook/art-app/functions/handlers/paintings.js:155:23)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:8402) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:8402) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T22:54:01.563Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T22:54:02.869Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T22:54:02.869Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:54:02.872Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:54:02.873Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:54:02.874Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:54:05.308Z] Accepted request GET /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/like --> api
+[debug] [2019-11-08T22:54:05.615Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:54:05.616Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:54:05.619Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:54:05.620Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:54:05.620Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:54:06.020Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:54:06.020Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:54:06.021Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:54:06.027Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8407.sock"}
+[debug] [2019-11-08T22:54:06.028Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8407.sock"}
+[debug] [2019-11-08T22:54:06.039Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:54:06.076Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~2s
+[debug] [2019-11-08T22:54:24.853Z] Accepted request GET /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/unlike --> api
+[debug] [2019-11-08T22:54:25.191Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T22:54:25.193Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T22:54:25.196Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T22:54:25.197Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:54:25.198Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T22:54:25.617Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T22:54:25.617Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T22:54:25.618Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T22:54:25.627Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8408.sock"}
+[debug] [2019-11-08T22:54:25.628Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8408.sock"}
+[debug] [2019-11-08T22:54:25.638Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T22:54:25.684Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:02:03.861Z] Accepted request GET /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/like --> api
+[debug] [2019-11-08T23:02:04.688Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:02:04.689Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:02:04.721Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:02:04.725Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:02:04.726Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:02:05.988Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:02:05.988Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:02:05.988Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:02:05.996Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8425.sock"}
+[debug] [2019-11-08T23:02:05.997Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8425.sock"}
+[debug] [2019-11-08T23:02:06.010Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:02:06.097Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:17:11.100Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:17:12.842Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:17:12.843Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:17:12.849Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:17:12.851Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:17:12.852Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:17:38.969Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/comment --> api
+[debug] [2019-11-08T23:17:39.322Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:17:39.324Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:17:39.328Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:17:39.329Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:17:39.330Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:17:39.764Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:17:39.764Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:17:39.764Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:17:39.775Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8444.sock"}
+[debug] [2019-11-08T23:17:39.781Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8444.sock"}
+[debug] [2019-11-08T23:17:39.818Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:17:39.914Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  SyntaxError: Unexpected token o in JSON at position 1
+[info] >      at JSON.parse (<anonymous>)
+[info] >      at exports.commentOnPainting (/Users/macbook/art-app/functions/handlers/paintings.js:80:26)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:19:02.252Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:19:03.811Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:19:03.812Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:19:03.818Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:19:03.820Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:03.820Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:05.159Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/comment --> api
+[debug] [2019-11-08T23:19:05.746Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:19:05.747Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:19:05.751Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:19:05.752Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:05.753Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:06.157Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:19:06.157Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:19:06.157Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:19:06.163Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8449.sock"}
+[debug] [2019-11-08T23:19:06.164Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8449.sock"}
+[debug] [2019-11-08T23:19:06.200Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:19:06.274Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  SyntaxError: Unexpected token N in JSON at position 0
+[info] >      at JSON.parse (<anonymous>)
+[info] >      at exports.commentOnPainting (/Users/macbook/art-app/functions/handlers/paintings.js:80:26)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:19:15.569Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:19:16.858Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:19:16.858Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:19:16.862Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:19:16.863Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:16.863Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:18.294Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/comment --> api
+[debug] [2019-11-08T23:19:18.609Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:19:18.611Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:19:18.614Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:19:18.614Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:18.615Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:19.033Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:19:19.034Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:19:19.034Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:19:19.043Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8452.sock"}
+[debug] [2019-11-08T23:19:19.043Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8452.sock"}
+[debug] [2019-11-08T23:19:19.064Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:19:19.108Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  SyntaxError: Unexpected token o in JSON at position 1
+[info] >      at JSON.parse (<anonymous>)
+[info] >      at exports.commentOnPainting (/Users/macbook/art-app/functions/handlers/paintings.js:80:26)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:19:58.483Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:19:59.787Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:19:59.788Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:19:59.790Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:19:59.792Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:19:59.792Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:20:25.717Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/comment --> api
+[debug] [2019-11-08T23:20:26.062Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:20:26.062Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:20:26.065Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:20:26.066Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:20:26.067Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:20:26.510Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:20:26.511Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:20:26.511Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:20:26.519Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8455.sock"}
+[debug] [2019-11-08T23:20:26.520Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8455.sock"}
+[debug] [2019-11-08T23:20:26.547Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:20:26.592Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  SyntaxError: Unexpected token o in JSON at position 1
+[info] >      at JSON.parse (<anonymous>)
+[info] >      at exports.commentOnPainting (/Users/macbook/art-app/functions/handlers/paintings.js:80:26)
+[info] >      at Layer.handle [as handle_request] (/Users/macbook/art-app/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at next (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:137:13)
+[info] >      at admin.auth.verifyIdToken.then.then.data (/Users/macbook/art-app/functions/util/fbAuth.js:30:14)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:22:07.531Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/comment --> api
+[debug] [2019-11-08T23:22:07.952Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:22:07.954Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:22:07.958Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:22:07.960Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:22:07.961Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:22:08.674Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:22:08.674Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:22:08.674Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:22:08.688Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8456.sock"}
+[debug] [2019-11-08T23:22:08.689Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8456.sock"}
+[debug] [2019-11-08T23:22:08.720Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:22:08.794Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:22:55.392Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:22:56.722Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:22:56.723Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:22:56.725Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:22:56.727Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:22:56.727Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:23:06.687Z] Accepted request POST /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK/comment --> api
+[debug] [2019-11-08T23:23:07.024Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:23:07.025Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:23:07.029Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:23:07.031Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:23:07.032Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:23:07.485Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:23:07.485Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:23:07.485Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:23:07.492Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8459.sock"}
+[debug] [2019-11-08T23:23:07.493Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8459.sock"}
+[debug] [2019-11-08T23:23:07.512Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:23:07.553Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:25:40.097Z] File /Users/macbook/art-app/functions/index.js changed, reloading triggers
+[debug] [2019-11-08T23:25:41.713Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:25:41.714Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:25:41.719Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:25:41.721Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:25:41.722Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  Error: Route.delete() requires a callback function but got a [object Undefined]
+    at Route.(anonymous function) [as delete] (/Users/macbook/art-app/functions/node_modules/express/lib/router/route.js:202:15)
+    at Function.app.(anonymous function) [as delete] (/Users/macbook/art-app/functions/node_modules/express/lib/application.js:482:19)
+    at Object.<anonymous> (/Users/macbook/art-app/functions/index.js:26:11)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-11-08T23:32:30.821Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:32:32.433Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:32:32.434Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:32:32.439Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:32:32.440Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:32:32.441Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:32:42.330Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:32:43.602Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:32:43.602Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:32:43.605Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:32:43.607Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:32:43.607Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:34:51.082Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:34:52.405Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:34:52.405Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:34:52.409Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:34:52.409Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:34:52.410Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:36:12.589Z] Accepted request DELETE /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK --> api
+[debug] [2019-11-08T23:36:12.931Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:36:12.932Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:36:12.936Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:36:12.936Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:36:12.937Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:36:13.398Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:36:13.398Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:36:13.398Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:36:13.408Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8475.sock"}
+[debug] [2019-11-08T23:36:13.410Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8475.sock"}
+[debug] [2019-11-08T23:36:13.445Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:36:13.521Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  ReferenceError: doc is not defined
+[info] >      at document.get.then (/Users/macbook/art-app/functions/handlers/paintings.js:212:7)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:38:28.751Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:38:30.673Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:38:30.674Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:38:30.678Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:38:30.680Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:38:30.682Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:38:32.745Z] Accepted request DELETE /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK --> api
+[debug] [2019-11-08T23:38:33.072Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:38:33.076Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:38:33.077Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:38:33.078Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:38:33.080Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:38:33.498Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:38:33.498Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:38:33.499Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:38:33.505Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8479.sock"}
+[debug] [2019-11-08T23:38:33.506Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8479.sock"}
+[debug] [2019-11-08T23:38:33.539Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:38:33.612Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  TypeError: req.json is not a function
+[info] >      at document.get.then.then (/Users/macbook/art-app/functions/handlers/paintings.js:222:11)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:39:10.565Z] File /Users/macbook/art-app/functions/handlers/paintings.js changed, reloading triggers
+[debug] [2019-11-08T23:39:12.167Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:39:12.167Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:39:12.171Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:39:12.172Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:39:12.173Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:39:13.330Z] Accepted request DELETE /art-app-32060/us-central1/api/paintings/gDobdTLixLXCX71gBLAK --> api
+[debug] [2019-11-08T23:39:13.734Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:39:13.735Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:39:13.738Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:39:13.739Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:39:13.740Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:39:14.188Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:39:14.188Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:39:14.188Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:39:14.197Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8484.sock"}
+[debug] [2019-11-08T23:39:14.198Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8484.sock"}
+[debug] [2019-11-08T23:39:14.234Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:39:14.306Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at document.get.then.then (/Users/macbook/art-app/functions/handlers/paintings.js:222:11)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:8484) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:470:11)
+[info] >      at ServerResponse.header (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:771:10)
+[info] >      at ServerResponse.send (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:170:12)
+[info] >      at ServerResponse.json (/Users/macbook/art-app/functions/node_modules/express/lib/response.js:267:15)
+[info] >      at document.get.then.then.catch.err (/Users/macbook/art-app/functions/handlers/paintings.js:226:30)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:8484) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:8484) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:40:03.620Z] Accepted request DELETE /art-app-32060/us-central1/api/paintings/MCw6MbfLUIBC5vtJBb6y --> api
+[debug] [2019-11-08T23:40:04.300Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-08T23:40:04.302Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:40:04.309Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:40:04.311Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:40:04.312Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:40:05.236Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-11-08T23:40:05.236Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-08T23:40:05.237Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-08T23:40:05.246Z] {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8485.sock"}
+[debug] [2019-11-08T23:40:05.247Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/tz/fm1rnndd4jq_s8xd60jsh1880000gn/T/firebase_emulator_invocation_8485.sock"}
+[debug] [2019-11-08T23:40:05.280Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-08T23:40:05.353Z] [runtime-status] Ephemeral server survived. {}
+[info] >  { iss: 'https://securetoken.google.com/art-app-32060',
+[info] >    aud: 'art-app-32060',
+[info] >    auth_time: 1573253490,
+[info] >    user_id: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    sub: 'IdWoNt3azha5Nwt3m2paqKON3Wg2',
+[info] >    iat: 1573253490,
+[info] >    exp: 1573257090,
+[info] >    email: 'user@gmail.com',
+[info] >    email_verified: false,
+[info] >    firebase:
+[info] >     { identities: { email: [Array] }, sign_in_provider: 'password' },
+[info] >    uid: 'IdWoNt3azha5Nwt3m2paqKON3Wg2' }
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-08T23:46:19.340Z] File /Users/macbook/art-app/functions/index.js changed, reloading triggers
+[debug] [2019-11-08T23:46:21.127Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-08T23:46:21.127Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-08T23:46:21.132Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-08T23:46:21.134Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-08T23:46:21.135Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /Users/macbook/art-app/functions/index.js:47
+        createdAt: new Date().toISOString;
+                                         ^
+
+SyntaxError: Unexpected token ;
+    at Module._compile (internal/modules/cjs/loader.js:721:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at /usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:677:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/usr/local/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+[warn] ⚠  We were unable to load your functions code. (see above)

@@ -28,13 +28,18 @@ exports.postOnePainting = (req, res) => {
   const newPainting = {
     body: req.body.body,
     userHandle: req.user.handle,
-    createdAt: new Date().toISOString()
+    userImage: req.user.imageUrl,
+    createdAt: new Date().toISOString(),
+    likeCount: 0,
+    commentCount: 0
   };
 
-  db.collection("Paintings")
+  db.collection("paintings")
     .add(newPainting)
     .then(doc => {
-      res.json({ message: `document ${doc.id} created successfully` });
+      const resPainting = newPainting;
+      resPainting.paintingId = doc.id;
+      res.json(resPainting);
     })
     .catch(err => {
       res.status(500).json({ error: "something went wrong" });
@@ -44,7 +49,7 @@ exports.postOnePainting = (req, res) => {
 
 exports.getPainting = (req, res) => {
   let paintingData = {};
-  db.doc(`/Paintings/${req.params.paintingId}`)
+  db.doc(`/paintings/${req.params.paintingId}`)
     .get()
     .then(doc => {
       if (!doc.exists) {
@@ -68,5 +73,156 @@ exports.getPainting = (req, res) => {
     .catch(err => {
       console.error(err);
       res.status(500).json({ error: err.code });
+    });
+};
+
+exports.commentOnPainting = (req, res) => {
+  if (req.body.body.trim() === "")
+    return res.status(400).json({ error: "Must not be empty" });
+
+  const newComment = {
+    body: req.body.body,
+    createdAt: new Date().toISOString(),
+    paintingId: req.params.paintingId,
+    userHandle: req.user.handle,
+    userImage: req.user.imageUrl
+  };
+
+  db.doc(`/paintings/${req.params.paintingId}`)
+    .get()
+    .then(doc => {
+      if (!doc.exists) {
+        return res.status(404).json({ error: "Painting does not exist" });
+      }
+      return doc.ref.update({ commentCount: doc.data().commentCount + 1 });
+    })
+    .then(() => {
+      return db.collection(`comments`).add(newComment);
+    })
+    .then(() => {
+      res.json(newComment);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: "Something went wrong" });
+    });
+};
+
+//like a painting
+exports.likePainting = (req, res) => {
+  const likeDocument = db
+    .collection("likes")
+    .where("userHandle", "==", req.user.handle)
+    .where("paintingId", "==", req.params.paintingId)
+    .limit(1);
+
+  const paintingDocument = db.doc(`/paintings/${req.params.paintingId}`);
+
+  let paintingData;
+
+  paintingDocument
+    .get()
+    .then(doc => {
+      if (doc.exists) {
+        paintingData = doc.data();
+        paintingData.paintingId = doc.id;
+        return likeDocument.get();
+      } else {
+        return res.status(404).json({ error: "Painting not found" });
+      }
+    })
+    .then(data => {
+      if (data.empty) {
+        return db
+          .collection("likes")
+          .add({
+            paintingId: req.params.paintingId,
+            userHandle: req.user.handle
+          })
+          .then(() => {
+            paintingData.likeCount++;
+            return paintingDocument.update({
+              likeCount: paintingData.likeCount
+            });
+          })
+          .then(() => {
+            return res.json(paintingData);
+          });
+      } else {
+        return res.status(400).json({ error: "Painting already liked" });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: err.code });
+    });
+};
+
+exports.unlikePainting = (req, res) => {
+  const likeDocument = db
+    .collection("likes")
+    .where("userHandle", "==", req.user.handle)
+    .where("paintingId", "==", req.params.paintingId)
+    .limit(1);
+
+  const paintingDocument = db.doc(`/paintings/${req.params.paintingId}`);
+
+  let paintingData;
+
+  paintingDocument
+    .get()
+    .then(doc => {
+      if (doc.exists) {
+        paintingData = doc.data();
+        paintingData.paintingId = doc.id;
+        return likeDocument.get();
+      } else {
+        return res.status(404).json({ error: "Painting not found" });
+      }
+    })
+    .then(data => {
+      if (data.empty) {
+        return res.status(400).json({ error: "Painting not liked" });
+      } else {
+        return db
+          .doc(`/likes/${data.docs[0].id}`)
+          .delete()
+          .then(() => {
+            paintingData.likeCount--;
+            return paintingDocument.update({
+              likeCount: paintingData.likeCount
+            });
+          })
+          .then(() => {
+            res.json(paintingData);
+          });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: err.code });
+    });
+};
+
+exports.deletePainting = (req, res) => {
+  const document = db.doc(`/paintings/${req.params.paintingId}`);
+  document
+    .get()
+    .then(doc => {
+      if (!doc.exists) {
+        return res.status(404).json({ error: "Painting not found" });
+      }
+      if (doc.data().userHandle !== req.user.handle) {
+        return res.status(403).json({ error: "Unauthorized" });
+      } else {
+        return document.delete();
+      }
+    })
+    .then(() => {
+      res.json({ message: "Painting deleted succesfully" });
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({ error: err.code });
     });
 };

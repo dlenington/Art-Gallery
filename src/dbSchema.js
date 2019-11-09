@@ -27,6 +27,16 @@ let db = {
       body: "nice painting",
       createdAt: "2019-10-24T00:30:58.419Z"
     }
+  ],
+  notifications: [
+    {
+      recipient: "user",
+      sender: "john",
+      read: "true | false",
+      paintingId: "kajdhfkaljhdfla",
+      type: "like | comment",
+      createdAt: "2019-10-24T00:30:58.419Z"
+    }
   ]
 };
 
