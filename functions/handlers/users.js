@@ -116,32 +116,41 @@ exports.addUserDetails = (req, res) => {
       return res.status(500).json({ error: err.code });
     });
 };
-//Get own user details
-// exports.getAuthenicatedUser = (req, res) => {
-//   let userData = {};
-//   db.doc(`/users/${req.user.handle}`)
-//     .get()
-//     .then(doc => {
-//       if (doc.exists) {
-//         userData.credentials = doc.data();
-//         return db
-//           .collection("likes")
-//           .where("userHandle", "==", req.user.handle)
-//           .get();
-//       }
-//     })
-//     .then(data => {
-//       userData.likes = [];
-//       data.forEach(doc => {
-//         userData.likes.push(doc.data());
-//       });
-//       return res.json(userData);
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       return res.status(500).json({ error: err.code });
-//     });
-// };
+
+exports.getUserDetails = (req, res) => {
+  let userData = {};
+  db.doc(`/users/${req.params.handle}`)
+    .get()
+    .then(doc => {
+      if (doc.exists) {
+        userData.user = doc.data();
+        return db
+          .collection("paintings")
+          .where("userHandle", "==".req.params.handle)
+          .orderBy("createdAt", "desc")
+          .get();
+      }
+    })
+    .then(data => {
+      userData.paintings = [];
+      data.forEach(doc => {
+        userData.paintings.push({
+          body: doc.data().body,
+          createdAt: doc.data().createdAt,
+          userHandle: doc.data().userHandle,
+          userImage: doc.data().userImage,
+          likeCount: doc.data().likeCount,
+          commentCount: doc.data().commentCount,
+          paintingId: doc.data().paintingId
+        });
+      });
+      return res.json(userData);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({ error: err.code });
+    });
+};
 
 exports.getAuthenticatedUser = (req, res) => {
   let userData = {};
@@ -160,6 +169,25 @@ exports.getAuthenticatedUser = (req, res) => {
       userData.likes = [];
       data.forEach(doc => {
         userData.likes.push(doc.data());
+      });
+      return db
+        .collection("notifications")
+        .where("recipient", "==", req.user.handle)
+        .orderBy("createdAt", "desc")
+        .limit(10)
+        .get();
+    })
+    .then(data => {
+      userData.notifications = [];
+      data.forEach(doc => {
+        userData.notifications.push({
+          recipient: doc.data().recipient,
+          sender: doc.data().recipient,
+          createdAt: doc.data().recipient,
+          screamId: doc.data().recipient,
+          type: doc.data().recipient,
+          notifications: doc.data().recipient
+        });
       });
       return res.json(userData);
     })

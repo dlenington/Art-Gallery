@@ -1,5 +1,5 @@
 var admin = require("firebase-admin");
-var serviceAccount = require("./../../art-app-32060-firebase-adminsdk-ebofm-99fccc698a.json");
+var serviceAccount = require("./key-config.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://art-app-32060.firebaseio.com",
