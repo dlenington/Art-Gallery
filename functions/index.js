@@ -36,7 +36,7 @@ app.post("/user/image", FBAuth, uploadImage);
 app.post("/user", FBAuth, addUserDetails);
 app.get("/user", FBAuth, getAuthenticatedUser);
 app.get("/user/:handle", getUserDetails);
-// app.post("/notifications", FBAuth, markNotificationsRead);
+app.post("/notifications", FBAuth, markNotificationsRead);
 
 //Post a painting
 
@@ -105,4 +105,66 @@ exports.createNotifcationOnComment = functions
         console.error(err);
         return;
       });
+  });
+
+exports.onUserImageChange = functions
+  .region("us-central1")
+  .firestore.document("/users/{userId}")
+  .onUpdate(change => {
+    console.log(change.before.data());
+    console.log(change.after.data());
+    if (change.before.data().imageUrl !== change.after.data().imageUrl) {
+      console.log("Image has changed");
+      const batch = db.batch();
+      return db
+        .collection("paintings")
+        .where("userHandle", "==", change.before.data().handle)
+        .get()
+        .then(data => {
+          data.forEach(doc => {
+            const painting = db.doc(`/paintings/${doc.id}`);
+            batch.update(painting, {
+              userImage: change.after.data().imageUrl
+            });
+          });
+          return batch.commit();
+        });
+    } else return true;
+  });
+
+exports.onPaintingDelete = functions
+  .region("us-central1")
+  .firestore.document("/paintings/{paintingId}")
+  .onDelete((snapshot, context) => {
+    const paintingId = context.params.paintingId;
+    const batch = db.batch();
+    return db
+      .collection("comments")
+      .where("paintingId", "==", paintingId)
+      .get()
+      .then(data => {
+        data.forEach(doc => {
+          batch.delete(db.doc(`/comments/${doc.id}`));
+        });
+        return db
+          .collection("likes")
+          .where("paintingId", "==", paintingId)
+          .get();
+      })
+      .then(data => {
+        data.forEach(doc => {
+          batch.delete(db.doc(`/likes/${doc.id}`));
+        });
+        return db
+          .collection("notifications")
+          .where("paintingId", "==", paintingId)
+          .get();
+      })
+      .then(data => {
+        data.forEach(doc => {
+          batch.delete(db.doc(`/notifications/${doc.id}`));
+        });
+        return batch.commit();
+      })
+      .catch(err => console.error(err));
   });
