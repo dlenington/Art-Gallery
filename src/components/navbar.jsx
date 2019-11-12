@@ -1,36 +1,27 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import Link from "react-router-dom/Link";
+
+//MUI imports
+import AppBar from "@material-ui/core/AppBar";
+import ToolBar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
 
 const NavBar = ({ user }) => {
   // console.log(user.name);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        Vidly
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="navbar-nav">
-        <NavLink className="nav-item nav-link" to="/">
-          Movies
-        </NavLink>
-        <NavLink className="nav-item nav-link" to="/">
-          Customers
-        </NavLink>
-        <NavLink className="nav-item nav-link" to="/">
-          Rentals
-        </NavLink>
-      </div>
-    </nav>
+    <AppBar>
+      <ToolBar class="nav-container">
+        <Button color="inherit" component={Link} to="/login">
+          Login
+        </Button>
+        <Button color="inherit" component={Link} to="/">
+          Home
+        </Button>
+        <Button color="inherit" component={Link} to="/signup">
+          Signup
+        </Button>
+      </ToolBar>
+    </AppBar>
   );
 };
 
