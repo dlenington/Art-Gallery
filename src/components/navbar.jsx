@@ -10,7 +10,7 @@ const NavBar = ({ user }) => {
   // console.log(user.name);
   return (
     <AppBar>
-      <ToolBar class="nav-container">
+      <ToolBar className="nav-container">
         <Button color="inherit" component={Link} to="/login">
           Login
         </Button>
