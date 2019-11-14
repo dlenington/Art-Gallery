@@ -1,7 +1,7 @@
 const { db } = require("../util/admin");
 
 exports.getAllPaintings = (req, res) => {
-  db.collection("Paintings")
+  db.collection("paintings")
     .orderBy("createdAt", "desc")
     .get()
     .then(data => {

@@ -10,6 +10,7 @@ class home extends Component {
     axios
       .get("/paintings")
       .then(res => {
+        console.log(res.data);
         this.setState({
           paintings: res.data
         });
@@ -17,10 +18,15 @@ class home extends Component {
       .catch(err => console.log(err));
   }
   render() {
+    let recentPaintingsMarkup = this.state.paintings ? (
+      this.state.paintings.map(painting => <p>{painting.body}</p>)
+    ) : (
+      <p>Loading...</p>
+    );
     return (
       <Grid container spacing={2}>
         <Grid item sm={8} xs={12}>
-          <p>Content</p>
+          {recentPaintingsMarkup}
         </Grid>
         <Grid item sm={4} xs={12}>
           <p>Profile</p>

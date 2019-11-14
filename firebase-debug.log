@@ -1,35 +1,74 @@
-[debug] [2019-11-09T23:19:57.229Z] ----------------------------------------------------------------------
-[debug] [2019-11-09T23:19:57.231Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
-[debug] [2019-11-09T23:19:57.232Z] CLI Version:   7.7.0
-[debug] [2019-11-09T23:19:57.232Z] Platform:      darwin
-[debug] [2019-11-09T23:19:57.232Z] Node Version:  v10.16.0
-[debug] [2019-11-09T23:19:57.233Z] Time:          Sat Nov 09 2019 17:19:57 GMT-0600 (Central Standard Time)
-[debug] [2019-11-09T23:19:57.233Z] ----------------------------------------------------------------------
-[debug] [2019-11-09T23:19:57.233Z] 
-[debug] [2019-11-09T23:19:57.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-11-09T23:19:57.245Z] > authorizing via signed-in user
-[debug] [2019-11-09T23:19:57.245Z] [iam] checking project art-app-32060 for permissions ["firebase.projects.get"]
-[debug] [2019-11-09T23:19:57.247Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/art-app-32060:testIamPermissions  
-
-[debug] [2019-11-09T23:19:57.434Z] <<< HTTP RESPONSE 200
-[debug] [2019-11-09T23:19:57.437Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/art-app-32060  
- 
-[debug] [2019-11-09T23:19:57.772Z] <<< HTTP RESPONSE 200
-[info] 
-[info] === Serving from '/Users/macbook/art-app'...
-[info] 
+[debug] [2019-11-14T01:35:46.796Z] ----------------------------------------------------------------------
+[debug] [2019-11-14T01:35:46.798Z] Command:       /usr/local/bin/node /usr/local/bin/firebase emulators:start
+[debug] [2019-11-14T01:35:46.798Z] CLI Version:   7.7.0
+[debug] [2019-11-14T01:35:46.798Z] Platform:      darwin
+[debug] [2019-11-14T01:35:46.798Z] Node Version:  v10.16.0
+[debug] [2019-11-14T01:35:46.799Z] Time:          Wed Nov 13 2019 19:35:46 GMT-0600 (Central Standard Time)
+[debug] [2019-11-14T01:35:46.799Z] ----------------------------------------------------------------------
+[debug] [2019-11-14T01:35:46.799Z] 
+[info] i  Starting emulators: ["functions","firestore"]
 [warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
-[info] ✔  functions: Emulator started at http://localhost:5000
+[info] ✔  functions: Emulator started at http://localhost:5001
+[info] i  firestore: Serving ALL traffic (including WebChannel) on http://localhost:8080
+[warn] ⚠  firestore: Support for WebChannel on a separate port (8081) is DEPRECATED and will go away soon. Please use port above instead.
+[debug] [2019-11-14T01:35:47.154Z] Ignoring unsupported arg: projectId
+[debug] [2019-11-14T01:35:47.154Z] Ignoring unsupported arg: auto_download
+[debug] [2019-11-14T01:35:47.154Z] Starting emulator firestore with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/macbook/.cache/firebase/emulators/cloud-firestore-emulator-v1.10.0.jar","--host","localhost","--port",8080,"--rules","/Users/macbook/art-app/firestore.rules","--functions_emulator","localhost:5001","--webchannel_port",8081],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator"]}
+[info] i  firestore: Emulator logging to firestore-debug.log
+[debug] [2019-11-14T01:35:50.385Z] API endpoint: http://localhost:
+[debug] [2019-11-14T01:35:50.385Z] 8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8080
+
+Dev App Server is now running.
+
+
+[info] ✔  firestore: Emulator started at http://localhost:8080
+[info] i  firestore: For testing set FIRESTORE_EMULATOR_HOST=localhost:8080
 [info] i  functions: Watching "/Users/macbook/art-app/functions" for Cloud Functions...
-[debug] [2019-11-09T23:19:58.066Z] [worker-~diagnostic~-ac545f56-f4fb-42d1-b428-5ae229263e28]: BUSY
-[debug] [2019-11-09T23:19:58.347Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
-[debug] [2019-11-09T23:19:58.349Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
-[debug] [2019-11-09T23:19:58.352Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
-[debug] [2019-11-09T23:19:58.353Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
-[debug] [2019-11-09T23:19:58.354Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
-[info] ✔  functions[api]: http function initialized (http://localhost:5000/art-app-32060/us-central1/api).
-[info] i  functions[createNotificationOnLike]: function ignored because the firestore emulator does not exist or is not running.
-[info] i  functions[deleteNotificationOnUnLike]: function ignored because the firestore emulator does not exist or is not running.
-[info] i  functions[createNotifcationOnComment]: function ignored because the firestore emulator does not exist or is not running.
-[debug] [2019-11-09T23:19:59.169Z] [worker-~diagnostic~-ac545f56-f4fb-42d1-b428-5ae229263e28]: exited
-[debug] [2019-11-09T23:19:59.169Z] [worker-~diagnostic~-ac545f56-f4fb-42d1-b428-5ae229263e28]: FINISHED
+[debug] [2019-11-14T01:35:50.457Z] [worker-~diagnostic~-5aa3c33d-eb03-4827-9af8-e49649c474f2]: BUSY
+[debug] [2019-11-14T01:35:50.897Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-14T01:35:50.898Z] [runtime-status] Disabled runtime features: undefined {}
+[debug] [2019-11-14T01:35:50.903Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-14T01:35:50.905Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-14T01:35:51.592Z] [runtime-status] Found google-gax at /Users/macbook/art-app/functions/node_modules/google-gax/build/src/index.js {}
+[debug] [2019-11-14T01:35:51.593Z] [runtime-status] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"},{"name":"google-gax","status":"mocked"}]
+[debug] [2019-11-14T01:35:51.682Z] [runtime-status] Checked functions.config() {"config":{}}
+[debug] [2019-11-14T01:35:51.683Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-14T01:35:51.684Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-14T01:35:51.684Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-14T01:35:51.783Z] [runtime-status] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2019-11-14T01:35:52.086Z] [runtime-status] initializeApp(DEFAULT) {"databaseURL":"https://art-app-32060.firebaseio.com","storageBucket":"art-app-32060.appspot.com","projectId":"art-app-32060","credential":{"certificate":{"projectId":"art-app-32060","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbggNvelMvor31\ntE2t6fxQRgCtRsJ2PvVsj80aj1laO9RyLBJFVSmt/ZmycGFrhFkmtAseGCsfR3Ej\nSjSz6r2xhqlw5s/qaFWOT5BbqNvPhLSQuKs1BQq16KoQ5xDENMSxvc68RhPVEnPO\nBPRasKziE990WY8OWNmATl5fooN/wkhRNi+BZIXVrx9m2X00vfim7Lb2NtoiADIw\nTGUx/HxeSwd9a4JMhh6lUgBUT0nt70i/H0mBCfotRybonkyIfdAWzptGQtpzS0cW\n4BHOzMVNRKC5zjc+DFUoeTaTVfT22rPA1srDhlCedIxsq5eYODCEHTzvZ6NJMpek\n6wb72NwHAgMBAAECggEACPO+ypE1WUyMl9gi9DYGK0Pt0nicL61A+qk9z9GZfS1g\nlwGmrYz4X2j1+ynLtKebdy3XBALaUghcak2yVaj78KD4whVwm8GCqRKV1ux4KZU4\nCxdeuli3Ehvu66XGIkbO4B6eWev+nRDAXWx6FO9wURwOJtGachcDGnvtD2KHrblX\nBGS0KxkDpZYMHpYkgeRumguExcetXaHF7iHyBaED9+U0UMTp3lCePgc7NJOIWOtc\n8GU1eUR0HMaHFZLAfFh0lh3Y0zlBNGEcSobg0vIOTa4M/dInkqZP+Ys/bSuTqeVC\nR6QfEz1CCmfCs/zDfub57DmgZRr1v1lRaRSUS56raQKBgQDxtVP+kQ/UCY5m9EOo\nqY/RYYnDUyVezZjNA8EWca9qwEh3jmNwh7mXYQqNX5DnH5T6li2atoDxgOOeiJJA\nr+nqxElf0JqiOJwzY618d8mLAYJnGnXOalvED7lxuUvosERUdATInEDtodEIZCdo\nQmSO5COqKatNuMsCsJGzKRilYwKBgQDofKStnxdrYj7CiiS5y9k74cuSdzYAs3f8\nY3WoNVdbHFauDcw1mcdgmvJv++YskoHNPcHAeb7/FYQJekZRV2WQ2l7EGYTucFVX\nRUdQFhBLO1inOpopjlhQfZLyTrMYXNkKPDuxLzBc1gFI/iYM3XBH+fIAIE9fFKOo\nxlqfKYKSDQKBgCHPGkueYNdo6slN23TpGtvPx+RRagXDvl7W6phIGKBW+wv2F8Sy\nx2v8P+ycdHlPupf+j6x3YLvnKm+PbN2tfYvAHv9O/4I3ZuntRGQHoWJXOLVRRy8z\nQ1i+VlMo9ww6M6SYgd7JtG9I1iNVVwnHV6eBE9gGchayBXt/1TF5SyA/AoGBAMXF\nmrWUG/Eez3Lg36MqlW8Kgwni3Y61HYIX/fQNBHYeYmKInEqQufoldc3rxP/v1foJ\n6jPZnbAT1pHVcdIqfd0+1tUNPHc2GnM2HRc03cGSB7Wi9ZgaXmiCmqoEZvh3q664\nVLNDCGpBJzC3+xiAm86vAr42vi6NOTgPHPI+9rNVAoGAVgL9LVOx0ZFYBAzeMFsL\nSEkgkeT3ugCtV5T54E8jqxczQ8vPwBduQ1Tz2vyLCBbcFXr0G6US/KLkuZgal2rm\nBAnQURTYZzfF0ch2M2f2B5KztJqCiX91FNfoy92qVBIxusz2UnplacorcEVEiZPa\nwGN635VpotHgqurvNGL77bQ=\n-----END PRIVATE KEY-----\n","clientEmail":"art-app-32060@appspot.gserviceaccount.com"},"httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}}
+[debug] [2019-11-14T01:35:52.591Z] addFirestoreTrigger "{\"eventTrigger\":{\"resource\":\"projects/art-app-32060/databases/(default)/documents/likes/{id}\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.create\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2019-11-14T01:35:52.610Z] [worker-~diagnostic~-5aa3c33d-eb03-4827-9af8-e49649c474f2]: exited
+[debug] [2019-11-14T01:35:52.610Z] [worker-~diagnostic~-5aa3c33d-eb03-4827-9af8-e49649c474f2]: FINISHED
+[debug] [2019-11-14T01:35:52.641Z] Nov 13, 2019 7:35:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
+[debug] [2019-11-14T01:35:52.919Z] Nov 13, 2019 7:35:52 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+
+[debug] [2019-11-14T01:35:53.366Z] addFirestoreTrigger "{\"eventTrigger\":{\"resource\":\"projects/art-app-32060/databases/(default)/documents/likes/{id}\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.delete\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2019-11-14T01:35:53.379Z] Nov 13, 2019 7:35:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
+[debug] [2019-11-14T01:35:53.391Z] addFirestoreTrigger "{\"eventTrigger\":{\"resource\":\"projects/art-app-32060/databases/(default)/documents/comments/{id}\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.create\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2019-11-14T01:35:53.395Z] Nov 13, 2019 7:35:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
+[debug] [2019-11-14T01:35:53.406Z] addFirestoreTrigger "{\"eventTrigger\":{\"resource\":\"projects/art-app-32060/databases/(default)/documents/users/{userId}\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2019-11-14T01:35:53.409Z] Nov 13, 2019 7:35:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
+[debug] [2019-11-14T01:35:53.419Z] addFirestoreTrigger "{\"eventTrigger\":{\"resource\":\"projects/art-app-32060/databases/(default)/documents/paintings/{paintingId}\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.delete\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2019-11-14T01:35:53.422Z] Nov 13, 2019 7:35:53 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+
+[info] ✔  functions[api]: http function initialized (http://localhost:5001/art-app-32060/us-central1/api).
+[info] ✔  functions[createNotificationOnLike]: firestore function initialized.
+[info] ✔  functions[deleteNotificationOnUnLike]: firestore function initialized.
+[info] ✔  functions[createNotifcationOnComment]: firestore function initialized.
+[info] ✔  functions[onUserImageChange]: firestore function initialized.
+[info] ✔  functions[onPaintingDelete]: firestore function initialized.
+[info] ✔  All emulators started, it is now safe to connect.
