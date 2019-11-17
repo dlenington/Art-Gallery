@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import PropTypes from "prop-types";
 import axios from "axios";
+import { Link } from "react-router-dom";
 //MUI imports
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const styles = {
   form: {
@@ -22,11 +24,15 @@ const styles = {
     margin: "10px auto 10px auto"
   },
   button: {
-    marginTop: 20
+    marginTop: 20,
+    position: "relative"
   },
   customError: {
     color: "red",
     fontSize: "0.8rem"
+  },
+  progress: {
+    position: "absolute"
   }
 };
 
@@ -37,10 +43,8 @@ class login extends Component {
       email: "",
       password: "",
       loading: false,
-      errors: {
-        email: "",
-        password: ""
-      }
+      errors: {},
+      fieldErrors: {}
     };
   }
   handleSubmit = event => {
@@ -55,16 +59,15 @@ class login extends Component {
     axios
       .post("/login", userData)
       .then(res => {
-        console.log(res.data);
         this.setState({
           loading: false
         });
         this.props.history.push("/");
       })
       .catch(err => {
-        // console.log(err.response.data.errors.email);
+        console.log(err.response.data);
         this.setState({
-          errors: err.response.data.errors,
+          errors: err.response.data,
           loading: false
         });
       });
@@ -94,7 +97,7 @@ class login extends Component {
               label="Email"
               className={classes.textField}
               helperText={errors.email}
-              error={errors.email ? true : false}
+              error={errors.errors ? true : false}
               value={this.state.email}
               onChange={this.handleChange}
               fullWidth
@@ -106,7 +109,7 @@ class login extends Component {
               label="Password"
               className={classes.textField}
               helperText={errors.password}
-              error={errors.password ? true : false}
+              error={errors.errors ? true : false}
               value={this.state.password}
               onChange={this.handleChange}
               fullWidth
@@ -121,9 +124,17 @@ class login extends Component {
               variant="contained"
               color="primary"
               className={classes.button}
+              disabled={loading}
             >
               Login
+              {loading && (
+                <CircularProgress size={30} className={classes.progress} />
+              )}
             </Button>
+            <br />
+            <small>
+              Don't have an account? Sign up <Link to="/signup">Here</Link>
+            </small>
           </form>
         </Grid>
         <Grid item sm />

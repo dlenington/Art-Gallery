@@ -1,0 +1,54 @@
+[debug] [2019-11-17T18:26:11.531Z] ----------------------------------------------------------------------
+[debug] [2019-11-17T18:26:11.533Z] Command:       /usr/local/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2019-11-17T18:26:11.533Z] CLI Version:   7.7.0
+[debug] [2019-11-17T18:26:11.533Z] Platform:      darwin
+[debug] [2019-11-17T18:26:11.533Z] Node Version:  v10.16.0
+[debug] [2019-11-17T18:26:11.534Z] Time:          Sun Nov 17 2019 12:26:11 GMT-0600 (Central Standard Time)
+[debug] [2019-11-17T18:26:11.534Z] ----------------------------------------------------------------------
+[debug] [2019-11-17T18:26:11.534Z] 
+[debug] [2019-11-17T18:26:11.546Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-17T18:26:11.546Z] > authorizing via signed-in user
+[debug] [2019-11-17T18:26:11.546Z] [iam] checking project art-app-32060 for permissions ["firebase.projects.get"]
+[debug] [2019-11-17T18:26:11.547Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-17T18:26:11.547Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-17T18:26:11.951Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-17T18:26:11.966Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/art-app-32060:testIamPermissions  
+
+[debug] [2019-11-17T18:26:12.543Z] <<< HTTP RESPONSE 200
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[debug] [2019-11-17T18:26:12.813Z] [functions] Watching "/Users/macbook/art-app/functions" for Cloud Functions...
+[debug] [2019-11-17T18:26:12.823Z] DEBUG: [worker-~diagnostic~-21dd2398-d499-4b69-aec3-461a08bcb130]: BUSY
+[debug] [2019-11-17T18:26:13.122Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-17T18:26:13.123Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-17T18:26:13.138Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-17T18:26:13.143Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-17T18:26:13.144Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-17T18:26:14.433Z] [functions[api]] http function initialized (http://localhost:5000/art-app-32060/us-central1/api).
+[debug] [2019-11-17T18:26:14.434Z] [functions[createNotificationOnLike]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2019-11-17T18:26:14.434Z] [functions[deleteNotificationOnUnLike]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2019-11-17T18:26:14.434Z] [functions[createNotifcationOnComment]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2019-11-17T18:26:14.434Z] [functions[onUserImageChange]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2019-11-17T18:26:14.434Z] [functions[onPaintingDelete]] function ignored because the firestore emulator does not exist or is not running.
+[info] i  functions: Loaded functions: api, createNotificationOnLike, deleteNotificationOnUnLike, createNotifcationOnComment, onUserImageChange, onPaintingDelete
+[debug] [2019-11-17T18:26:14.457Z] DEBUG: [worker-~diagnostic~-21dd2398-d499-4b69-aec3-461a08bcb130]: exited
+[debug] [2019-11-17T18:26:14.457Z] DEBUG: [worker-~diagnostic~-21dd2398-d499-4b69-aec3-461a08bcb130]: FINISHED
+[debug] [2019-11-17T18:52:05.641Z] DEBUG: File /Users/macbook/art-app/functions/util/validators.js changed, reloading triggers
+[debug] [2019-11-17T18:52:06.660Z] DEBUG: [worker-~diagnostic~-e3ecc080-3a73-437c-b9dd-3eb26450236e]: BUSY
+[debug] [2019-11-17T18:52:07.463Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-17T18:52:07.466Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-17T18:52:07.470Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-17T18:52:07.472Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-17T18:52:07.473Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-17T18:52:08.708Z] DEBUG: [worker-~diagnostic~-e3ecc080-3a73-437c-b9dd-3eb26450236e]: exited
+[debug] [2019-11-17T18:52:08.708Z] DEBUG: [worker-~diagnostic~-e3ecc080-3a73-437c-b9dd-3eb26450236e]: FINISHED
+[debug] [2019-11-17T19:02:53.122Z] DEBUG: File /Users/macbook/art-app/functions/handlers/users.js changed, reloading triggers
+[debug] [2019-11-17T19:02:54.134Z] DEBUG: [worker-~diagnostic~-1cad294e-69ea-43db-9c71-c8d57cfe6305]: BUSY
+[debug] [2019-11-17T19:02:54.976Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/macbook/art-app/functions","node_version":"10.16.0"}
+[debug] [2019-11-17T19:02:54.979Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-17T19:02:54.984Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-17T19:02:54.987Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-17T19:02:54.988Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/macbook/art-app/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-17T19:02:56.234Z] DEBUG: [worker-~diagnostic~-1cad294e-69ea-43db-9c71-c8d57cfe6305]: exited
+[debug] [2019-11-17T19:02:56.234Z] DEBUG: [worker-~diagnostic~-1cad294e-69ea-43db-9c71-c8d57cfe6305]: FINISHED
