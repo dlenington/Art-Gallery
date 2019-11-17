@@ -27,16 +27,16 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <React.Fragment>
+        <BrowserRouter>
           <NavBar />
           <main className="container">
             <Switch>
-              <Route path="/" component={home} />
+              <Route exact path="/" component={home} />
               <Route exact path="/login" component={login} />
               <Route exact path="/signup" component={signup} />
             </Switch>
           </main>
-        </React.Fragment>
+        </BrowserRouter>
       </MuiThemeProvider>
     );
   }
