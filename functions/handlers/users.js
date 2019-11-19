@@ -20,7 +20,7 @@ exports.signup = (req, res) => {
 
   const { valid, errors } = validateSignupData(newUser);
 
-  if (!valid) return res.status(400).json({ errors });
+  if (!valid) return res.status(400).json(errors);
 
   const noImg = "no-image.png";
 
@@ -83,26 +83,14 @@ exports.login = (req, res) => {
     })
     .catch(err => {
       console.error(err);
-      if (err.code === "auth/wrong-password") {
-        return res
-          .status(403)
-          .json({ general: "Wrong credentials, please try again" });
-      } else {
-        return res.status(500).json({ error: err.code });
-      }
+      return res
+        .status(403)
+        .json({ general: "Wrong credentials, please try again" });
     });
 };
 
 exports.addUserDetails = (req, res) => {
-  console.log("reqbody.bio = " + req.body.bio);
-  console.log("reqbody = " + req.body);
-  const user = JSON.parse(req.body);
-  // const user = {
-  //   bio: req.body.bio,
-  //   website: req.body.website,
-  //   location: req.body.location
-  // };
-  let userDetails = reduceUserDetails(user);
+  let userDetails = reduceUserDetails(req.body);
 
   db.doc(`/users/${req.user.handle}`)
     .update(userDetails)
