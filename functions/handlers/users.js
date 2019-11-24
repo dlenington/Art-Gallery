@@ -141,6 +141,7 @@ exports.getUserDetails = (req, res) => {
 };
 
 exports.getAuthenticatedUser = (req, res) => {
+  let userData = {};
   db.doc(`/users/${req.user.handle}`)
     .get()
     .then(doc => {
